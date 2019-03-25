@@ -1,0 +1,28 @@
+// Colors
+$base-text: #111a27;
+$base-bg: #ffffff;
+$secondary-color: #f2f2f0;
+$tertiary-color: #949494;
+$theme-red: #bc2629;
+$base-transparent: rgba(17, 26, 39, .7);
+
+// Color extend 
+%whiteColor{
+    color: $base-bg;
+}
+
+%whiteBackground{
+    background-color: $base-bg;
+}
+
+%baseTextColor{
+    color: $base-text;
+}
+
+%baseTextBgColor{
+    background-color: $base-text;
+}
+
+%baseGrayColor{
+    color: $tertiary-color;
+}

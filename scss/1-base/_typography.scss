@@ -1,0 +1,98 @@
+// roboto font face
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+// Akzidenzgrotesk font face
+@include font-face("akzidenzgrotesk_bq_light", "../fonts/akzidenzgrotesk_bq_light_regular-webfont");
+
+// marion-regular-webfont font face 
+@include font-face("marion-regular-webfont", "../fonts/marion-regular-webfont");
+
+// NoeDisplay Fonts stack
+$font-stack-akzidenzgrotesk_bq_light: (
+  "akzidenzgrotesk_bq_light",
+  sans-serif,
+);
+
+// "Trebuchet MS" font stak
+$font-stack-Trebuchet_MS: (
+  "Trebuchet MS", 
+   Arial, Helvetica, 
+   sans-serif
+);
+
+$font-stack-marion-regular: (
+  "marion-regular-webfont", 
+   sans-serif,
+);
+
+// fonts
+$d-font-size: 14px;
+$d-line-height: 28px;
+$d-font-weight: 300;
+$nav-font-size: 36px;
+$d-font-family: $font-stack-akzidenzgrotesk_bq_light;
+$nav-line-height: $nav-font-size + 3;
+$subnav-font-size: $d-font-size + 2;
+$subnav-line-height: $subnav-font-size + 6;
+
+$regularFontWeight: 400;
+$mediumFontWeight: 500;
+$boldFontWeight: 700;
+
+body{
+    // font-size: $d-font-size;
+    // line-height: $d-line-height;
+    // font-family: $d-font-family; 
+    // font-weight: $d-font-weight;   
+    -webkit-text-size-adjust: 100%; 
+    -moz-text-size-adjust:100%; 
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased; 
+    @include fonts(16px, 18px);
+    letter-spacing: 0.05px;
+}
+
+a{
+    outline: none;
+    &:focus{
+        outline: none;        
+    }
+}
+
+// Heading fonts
+h2{
+   @include fonts(38px, 45px, $font-stack-marion-regular);
+   font-family: $d-font-family;
+   letter-spacing: 1.11px;
+}
+
+h3{
+   @include fonts(36px, 42px, $font-stack-marion-regular);
+   letter-spacing: 1.05px;
+}
+
+h5{
+    @include fonts(22px, 26px);
+    letter-spacing: 0.64px;
+}
+
+h6{
+    @include fonts(18px, 21px);
+    color: $tertiary-color;
+    letter-spacing: 3px;
+}
+
+// button
+.btn{
+    font-weight: $mediumFontWeight;
+}
+
+// lead text
+.lead-text{
+    @include fonts(18px, 23px);
+}
+
+.body-link{
+    @include fonts(15px, 26px);
+    letter-spacing: 0.05px;
+}
