@@ -1,0 +1,30 @@
+// Color extend 
+%whiteColor{
+    color: $base-bg;
+}
+
+%whiteBackground{
+    background-color: $base-bg;
+}
+
+%baseTextColor{
+    color: $base-text;
+}
+
+%baseTextBgColor{
+    background-color: $base-text;
+}
+
+%baseGrayColor{
+    color: $light-gray;
+}
+
+%bgProperty{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+%bgLightGray{
+    background-color: $light-gray;
+}

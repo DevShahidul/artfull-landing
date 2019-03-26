@@ -1,0 +1,16 @@
+.main-footer-section{
+    margin-top: 55px;
+    padding-bottom: 62px;
+    border-top: 1px solid $gray-border;
+    .footer-widget{
+        margin-top: 54px;
+        h6{
+            margin-bottom: 10px;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

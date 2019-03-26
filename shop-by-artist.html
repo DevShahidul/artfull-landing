@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/main.css" crossorigin="anonymous">
 
-    <title>Brand | Home</title>
+    <title>Brand | Shop By Artist</title>
 </head>
 
 <body>
@@ -17,19 +17,15 @@
         <!-- Beginning header section -->
         <header class="main-header-section">
             <div class="container">
-                <div class="row top-bar">
-                    <div class="col-4">
-                       <span>ARTIST SUBMISSION</span>
-                    </div>
-                    <div class="col-8">
-                        <div class="link-wrap">
-                            <a href="#">SIGN UP</a>
-                            <a href="#">SIGN IN</a>
-                            <a href="#">CART (0)</a>
-                        </div>
-                        <form class="form-inline my-2 my-lg-0">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SEARCH</button>
+                <div class="row no-gutters top-bar">
+                    <span class="mr-auto">ARTIST SUBMISSION</span>
+                    <div class="top-right-link-wrap ml-auto">
+                        <a href="#" class="top-right-link">SIGN UP</a>
+                        <a href="#" class="top-right-link">SIGN IN</a>
+                        <a href="#" class="top-right-link">CART (0)</a>
+                        <form class="search-form my-0 d-inline-block">
+                          <input class="form-control mr-sm-2 d-none" type="search" placeholder="Search" aria-label="Search">
+                          <button class="m-0 p-0 header-search-triger" type="submit">SEARCH</button>
                         </form>
                     </div>
                 </div>
@@ -85,159 +81,117 @@
         <!-- //End header section -->
 
         <!-- Beginning main content section -->
-        <div class="main-content">
+        <div class="main-content shop-by-artist">
             <!-- Beginning hero section -->
-            <section class="hero-section" id="hero-section">
-                <div class="slider-wrap" style="background-image: url(../img/hero-slider-bg@2x.jpg);">
-                    <div class="container">
-                        <div class="slider-caption-wrap">
-                            <div class="play-video"><img src="svg/play-icon.svg" alt=""></div>
-                            <div class="caption-content">
-                                <h5>HOW TO START YOUR</h5>
-                                <h2>art collection</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section class="hero-section position-relative" id="hero-section" style="background-image: url(./img/shop-by-artist-hero.jpg);"></section>
             <!-- //End hero section -->
             
-            <!-- Beginning About section -->
-            <section class="about-section">
-                <div class="container lead-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>About Artfull</h2>
-                            <div class="lead-text">Buying art is a journey of discovery – about yourself, the artists and the world around you. Whether you are just starting your collection or are a seasoned collector, we are passionate about making it a memorable, inspiring and uplifting experience.</div>
-                            <a href="#" class="view-more-text">
-                                <img src="svg/view-more-at-about-u.svg" alt="">
-                            </a>
-                            <h6>AS SEEN IN</h6>
-                            <div class="logo-wrap row">
-                                <div class="col-3">
-                                    <img src="img/image-3@2x.png" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img src="img/image-2@2x.png" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img src="img/image-1@2x.png" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img src="img/visi-masthead@2x.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- //End About section -->
-            
-            <!-- Beginning Why buy from Section -->
-            <section class="Why-buy-from-us row">
-                <h2>Why buy from us?</h2>
-                <div class="container">
-                    <div class="col-md-4 col-12 feature-item">
-                        <div class="carousel-figure">
-                            <img src="svg/accessible-icon.svg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>Art made accessible</span>
-                            <p>We believe art is for everyone and that everyone should own art. We believe artists can make a living doing what they love and that anyone can easily find and buy original art, no matter their taste or budget.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 feature-item">
-                        <div class="carousel-figure">
-                            <img src="svg/curated-icon.svg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>Quality curated</span>
-                            <p>Whether you are a first-time art buyer or seasoned collector we connect you with the artists you love. We believe in art with a message, that’s made to last, in quality and authenticity. We believe in supporting the local creative economy of artists, art suppliers and building a new generation of art collectors one mouse click at time.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 feature-item">
-                        <div class="carousel-figure">
-                            <img src="svg/service-icon.svg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>At your service</span>
-                            <p>Buying art should be as enjoyable as living with art. A seamless online buying experience, that leads to your artwork framed, delivered to your door and ready to be hung on your wall. We stand for art made accessible and art collecting made simple.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- //End Why buy from Section -->
-            
-            <!-- Beginning discover section -->
-            <section class="discover-section">
+            <!-- Beginning DISCOVER ARTISTS -->
+            <section class="discover-artist-section">
                 <div class="container">
                     <div class="row">
-                        <div class="grid-item">
-                            <h2><span>DISCOVER</span> <span class="designation">BY MEDIUM</span></h2>
-                            <a href="#">COLLECT NOW</a>
+                        <div class="col-12 lead-text-wrap">
+                            <h3>DISCOVER ARTISTS</h3>
+                            <div class="lead-text">We respect, admire and work closely with our artists to offer original art that you will love. We select each artist based on their message, the quality of their work and their long-term creative potential.</div>
                         </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
+                    </div>
+                    <div class="row artist-item-wrap">
+                        <div class="col-12 col-md-4 artist">
+                            <img src="img/Andile-Buka@2x.jpg" alt="">
+                            <h5>Andile Buka</h5>
+                            <p>Daring and driven by the need to create, Andile describes his photography as documentary portraiture work. </p>
+                            <a href="#" class="body-link">Find out More ></a>
                         </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
+                        <div class="col-12 col-md-4 artist">
+                            <img src="img/Mbali-Dhlamini@2x.jpg" alt="">
+                            <h5>Mbali Dhlamini</h5>
+                            <p>A multidisciplinary artist and visual researcher, Mbali is interested in the decolonisation of contemporary African identity-making.</p>
+                            <a href="#" class="body-link">Find out More ></a>
                         </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
+                        <div class="col-12 col-md-4 artist">
+                            <img src="img/Themba-Khumalo@2x.jpg" alt="">
+                            <h5>Themba Khumalo</h5>
+                            <p>Themba’s emotive charcoal drawings and paintings capture the busy cityscapes and vast rural landscapes he observes in and around Johannesburg.</p>
+                            <a href="#" class="body-link">Find out More ></a>
                         </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
+                        <div class="col-12 col-md-4 artist">
+                            <img src="img/Zwelethu-Machepha@2x.jpg" alt="">
+                            <h5>Zwelethu Machepha</h5>
+                            <p>The mixing of original techniques, such as stitching and UV lighting as well as marrying different mediums, make Zwelethu's work is dynamic and distinctive.</p>
+                            <a href="#" class="body-link">Find out More ></a>
                         </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
+                        <div class="col-12 col-md-4 artist">
+                            <img src="img/Kgomotso-Neto@2x.jpg" alt="">
+                            <h5>Kgomotso Neto</h5>
+                            <p>Kgomotso’s photography blurs the line between documentary and fine art photography, creating raw and honest imagery that draws the viewer in.</p>
+                            <a href="#" class="body-link">Find out More ></a>
                         </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                        <div class="grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                        <div class="grid-item">
-                            <h2><span>DISCOVER</span> <span class="designation">BY ARTIST</span></h2>
-                            <a href="#">COLLECT NOW</a>
+                        <div class="col-12 col-md-4 artist">
+                            <img src="img/Nompumelelo-Ngoma@2x.jpg" alt="">
+                            <h5>Nompumelelo Ngoma</h5>
+                            <p>Nompumelelo’s work gives voice to women’s issues through the alluring medium of oil painting and watercolour.</p>
+                            <a href="#" class="body-link">Find out More ></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- //End discover section -->
-            
-            <!-- Beginning photography section -->
-            <section class="photography-section">
-                <div class="container">
-                    <div class="row title-wrap">
-                        <div class="col-12">
-                            <h2>Photography</h2>
-                            <p>There is photography to capture memories, to accompany news articles or to sell a product; fine art photography is different.</p>
-                            <a href="#"><img src="svg/read-more.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row grid-wrap">
-                        <div class="col-3 grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                        <div class="col-3 grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                        <div class="col-3 grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                        <div class="col-3 grid-item">
-                            <img src="img/grid-thumb.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- //End photography section -->
+            <!-- //End DISCOVER ARTISTS section -->
         </div>
         <!-- //End main content section -->
+        
+        <!-- Beginning footer section -->
+        <footer class="main-footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
+                        <h6>ABOUT</h6>
+                        <ul>
+                            <li><a href="#">artfull</a></li>
+                            <li><a href="#">Kholisa Thomas </a></li>
+                            <li><a href="#">Art Advisory</a></li>
+                            <li><a href="#">Artists</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
+                        <h6>COLLECTORS</h6>
+                        <ul>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns &amp; Refunds</a></li>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
+                        <h6>ARTISTS</h6>
+                        <ul>
+                            <li><a href="#">Submissions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
+                        <h6>THE FINE PRINT</h6>
+                        <ul>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
+                        <h6>SHARE &amp; FOLLOW</h6>
+                        <div class="social-wrap">
+                            <a href="#"><img src="svg/facebook-icon.svg" alt=""></a>
+                            <a href="#"><img src="svg/instagram-icon.svg" alt=""></a>
+                            <a href="#"><img src="svg/twitter-icon.svg" alt=""></a>
+                            <a href="#"><img src="svg/youtube-icon.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
+                        <h6>CONTACT US</h6>
+                        <ul>
+                            <li><a href="#">Let us help you</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //End footer section -->
     </main>
 
     <!-- Optional JavaScript -->
@@ -245,6 +199,52 @@
     <script src="./js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="./js/popper.min.js" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+        // Hero section slider
+        var heroSlider = $("#hero-slider");
+        heroSlider.slick({
+          dots: false,
+          arrows: false,
+          infinite: true,
+          speed: 800,
+          slidesToShow: 1,
+        });
+        $(".hero-slider-cotroller .prev").click(function(e){
+            e.preventDefault();
+            heroSlider.slick("prev");
+        })
+        $(".hero-slider-cotroller .next").click(function(e){
+            e.preventDefault();
+            heroSlider.slick("next");
+        });
+        
+        // Testimonial carousel function
+        var testimonialCarousel = $("#testimonial-carousel");
+        testimonialCarousel.slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 800,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          responsive: [{
+
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              }
+
+            }, {
+
+              breakpoint: 300,
+              settings: {
+                slidesToShow: 1,
+              }
+
+          }]
+        });
+    </script>
 </body>
 
 </html>

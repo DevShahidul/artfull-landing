@@ -4,12 +4,21 @@
 // Akzidenzgrotesk font face
 @include font-face("akzidenzgrotesk_bq_light", "../fonts/akzidenzgrotesk_bq_light_regular-webfont");
 
+// Akzidenzgrotesk font face
+@include font-face("akzidgrostd_regular", "../fonts/akzidgrostdreg-webfont");
+
 // marion-regular-webfont font face 
 @include font-face("marion-regular-webfont", "../fonts/marion-regular-webfont");
 
-// NoeDisplay Fonts stack
+// Akzidenzgrotesk Light Fonts stack
 $font-stack-akzidenzgrotesk_bq_light: (
   "akzidenzgrotesk_bq_light",
+  sans-serif,
+);
+
+// Akzidenzgrotesk Regular Fonts stack
+$font-stack-akzidenzgrotesk_bq_regular:(
+  "akzidgrostd_regular",
   sans-serif,
 );
 
@@ -26,11 +35,13 @@ $font-stack-marion-regular: (
 );
 
 // fonts
-$d-font-size: 14px;
-$d-line-height: 28px;
-$d-font-weight: 300;
-$nav-font-size: 36px;
+$d-font-size: 16px;
+$d-line-height: 20px;
+$d-font-weight: 400;
+$nav-font-size: 22px;
 $d-font-family: $font-stack-akzidenzgrotesk_bq_light;
+$d-font-regular-family: $font-stack-akzidenzgrotesk_bq_regular;
+$trebuchet-font: $font-stack-Trebuchet_MS;
 $nav-line-height: $nav-font-size + 3;
 $subnav-font-size: $d-font-size + 2;
 $subnav-line-height: $subnav-font-size + 6;
@@ -40,10 +51,10 @@ $mediumFontWeight: 500;
 $boldFontWeight: 700;
 
 body{
-    // font-size: $d-font-size;
-    // line-height: $d-line-height;
-    // font-family: $d-font-family; 
-    // font-weight: $d-font-weight;   
+     font-size: $d-font-size;
+     line-height: $d-line-height;
+     font-family: $d-font-family; 
+     font-weight: $d-font-weight;   
     -webkit-text-size-adjust: 100%; 
     -moz-text-size-adjust:100%; 
     -moz-osx-font-smoothing:grayscale;
@@ -62,7 +73,6 @@ a{
 // Heading fonts
 h2{
    @include fonts(38px, 45px, $font-stack-marion-regular);
-   font-family: $d-font-family;
    letter-spacing: 1.11px;
 }
 
@@ -72,19 +82,27 @@ h3{
 }
 
 h5{
-    @include fonts(22px, 26px);
+    @include fonts(22px, 26px, $d-font-family);
     letter-spacing: 0.64px;
 }
 
 h6{
-    @include fonts(18px, 21px);
-    color: $tertiary-color;
-    letter-spacing: 3px;
+    @include fonts(18px, 21px, $trebuchet-font);
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
 }
 
 // button
 .btn{
     font-weight: $mediumFontWeight;
+}
+
+.main-header-section{
+    font-family: $trebuchet-font;
+}
+.top-bar{
+    @include fonts(14px, 16px, $trebuchet-font);
+    letter-spacing: 0.75px;
 }
 
 // lead text
@@ -93,6 +111,82 @@ h6{
 }
 
 .body-link{
-    @include fonts(15px, 26px);
+    @include fonts(15px, 26px, $d-font-regular-family);
     letter-spacing: 0.05px;
+    text-transform: uppercase;
+}
+
+.nav-link{
+    @include fonts(22px, 26px, $trebuchet-font)
+}
+
+.caption-content{
+    h2{
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+
+// About section style
+.about-section{
+    h6{
+        font-family: $d-font-regular-family;
+    }
+}
+
+// Feature item style
+.feature-item{
+    .content{
+        span{
+            @include fonts(16px, 19px, $d-font-regular-family);
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Discover section style
+.discover-section{
+    .grid-item{
+        h2{
+            span{
+                &.designation{
+                    font-size: 34px;
+                    line-height: 34px;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }   
+}
+
+.testimonial-carousel{
+    .content{
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+
+// Artist style 
+.artist{
+    p{
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+// Footer section style 
+.footer-widget{
+    h6{
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    ul{
+        li{
+            a{
+                @include fonts(16px, 23px, $trebuchet-font);
+                letter-spacing: 0.86px;
+            }
+        }
+    }
 }

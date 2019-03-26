@@ -47,11 +47,11 @@
 
 // Font family style weight
 @mixin fonts($font-size: $d-font-size, $line-height: $d-line-height, $fontFamily: $d-font-family, $fontStyle: normal, $fontWeight: normal){
+    font-size: $font-size;
+    line-height: $line-height;
     font-family: $fontFamily;
     font-style: $fontStyle;
     font-weight: $fontWeight;
-    font-size: $font-size;
-    line-height: $line-height;
 
 } // End font property
 
@@ -130,5 +130,8 @@
     width: ( (100% - (($cols - 1) * $mgn)) / $cols);
     &:nth-child(#{$cols}n){
         margin-right: 0;
+    }
+    &:nth-child(#{$cols + 1}n){
+        clear: both;
     }
 }

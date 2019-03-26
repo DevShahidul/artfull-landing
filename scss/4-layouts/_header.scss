@@ -1,8 +1,8 @@
 
 #logo {
-  background: #ccc;
-  width: 150px;
-  height: 70px;
+  width: 248px;
+  height: 104px;
+  position: relative;
 }
 
 .navbar-toggler {
@@ -10,26 +10,54 @@
 }
 
 @include media-breakpoint-up(md){
-    .navbar {
-        height: 130px;
+    // .nav{}
+ 
+}
+// Top bar style
+.top-bar{
+    padding-top: 35px;
+    @include media-breakpoint-up(md){        
+        padding-right: 60px;
+        padding-left: 60px;
     }
+}
 
-    #logo {
-        width: 260px;
-        height: 120px;
+.top-right-link-wrap{
+    a{
+        padding: 0 13px;
         position: relative;
-        bottom: -20px;
-    }
-
-    .navbar-light{
-        .navbar-nav{
-            .nav-link {
-                padding-right: 75px;
+        &:before{
+            position: absolute; 
+            left: -1px; 
+            top: 50%;
+            @include transform(translateY(-50%));
+            content: "";
+            height: 14px;
+            width: 2px;
+            background: $base-text;
+        }
+        &:first-child{
+            &:before{
+                opacity: 0;
+                visibility: hidden;
             }
-        } 
+        }
     }
+}
+.search-form{
+    margin-left: 13px;
+}
 
-    #nav-left {
-        padding-left: 30px;
-    }    
+.header-search-triger{
+    padding-left: 16px !important;
+    background-image: url(../svg/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 12px 12px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
 }

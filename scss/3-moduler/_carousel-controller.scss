@@ -1,0 +1,23 @@
+.slick-slider{
+    .slick-arrow{
+        &:before{
+            width: 38px; 
+            height: 38px;
+            content: "";
+            background-image: url(../svg/arrow-right-transparent.svg);
+            background-size: cover;
+            display: block;
+
+        }
+    }
+
+    .slick-prev{
+        &:before{
+            background-image: url(../svg/arrow-left-transparent.svg);
+        }
+    }
+    .slick-next{
+        left: auto;
+        right: 0;
+    }  
+}

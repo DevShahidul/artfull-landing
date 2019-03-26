@@ -17,19 +17,15 @@
         <!-- Beginning header section -->
         <header class="main-header-section">
             <div class="container">
-                <div class="row top-bar">
-                    <div class="col-4">
-                       <span>ARTIST SUBMISSION</span>
-                    </div>
-                    <div class="col-8">
-                        <div class="link-wrap">
-                            <a href="#">SIGN UP</a>
-                            <a href="#">SIGN IN</a>
-                            <a href="#">CART (0)</a>
-                        </div>
-                        <form class="form-inline my-2 my-lg-0">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SEARCH</button>
+                <div class="row no-gutters top-bar">
+                    <span class="mr-auto">ARTIST SUBMISSION</span>
+                    <div class="top-right-link-wrap ml-auto">
+                        <a href="#" class="top-right-link">SIGN UP</a>
+                        <a href="#" class="top-right-link">SIGN IN</a>
+                        <a href="#" class="top-right-link">CART (0)</a>
+                        <form class="search-form my-0 d-inline-block">
+                          <input class="form-control mr-sm-2 d-none" type="search" placeholder="Search" aria-label="Search">
+                          <button class="m-0 p-0 header-search-triger" type="submit">SEARCH</button>
                         </form>
                     </div>
                 </div>
@@ -87,14 +83,41 @@
         <!-- Beginning main content section -->
         <div class="main-content">
             <!-- Beginning hero section -->
-            <section class="hero-section" id="hero-section">
-                <div class="slider-wrap" style="background-image: url(../img/hero-slider-bg@2x.jpg);">
-                    <div class="container">
-                        <div class="slider-caption-wrap">
-                            <div class="play-video"><img src="svg/play-icon.svg" alt=""></div>
-                            <div class="caption-content">
-                                <h5>HOW TO START YOUR</h5>
-                                <h2>art collection</h2>
+            <section class="hero-section position-relative" id="hero-section">
+                <div class="hero-slider-cotroller position-absolute">
+                    <div class="container position-relative">
+                        <button class="prev slick-arrow" type="button"><img src="svg/arrow-left.svg" alt=""></button>
+                        <button class="next slick-arrow" type="button"><img src="svg/arrow-right.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="hero-slider" id="hero-slider">
+                    <div class="slider-wrap" style="background-image: url(./img/hero-slider-bg@2x.jpg);">
+                        <div class="container position-relative">
+                            <div class="slider-caption-wrap position-absolute">
+                                <div class="slider-caption-inner">
+                                    <div class="slider-caption d-flex align-items-center">
+                                        <a href="#" class="play-video"><img src="svg/play-icon.svg" alt=""></a>
+                                        <div class="caption-content text-center">
+                                            <h5>HOW TO START YOUR</h5>
+                                            <h3>art collection</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-wrap" style="background-image: url(./img/hero-slider-bg@2x.jpg);">
+                        <div class="container position-relative">
+                            <div class="slider-caption-wrap position-absolute">
+                                <div class="slider-caption-inner">
+                                    <div class="slider-caption d-flex align-items-center">
+                                        <a href="#" class="play-video"><img src="svg/play-icon.svg" alt=""></a>
+                                        <div class="caption-content text-center">
+                                            <h5>HOW TO START YOUR</h5>
+                                            <h3>art collection</h3>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -105,24 +128,24 @@
             <!-- Beginning About section -->
             <section class="about-section">
                 <div class="container lead-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>About Artfull</h2>
+                    <div class="row no-gutters">
+                        <div class="col-12 lead-text-wrap">
+                            <h3>About Artfull</h3>
                             <div class="lead-text">Buying art is a journey of discovery – about yourself, the artists and the world around you. Whether you are just starting your collection or are a seasoned collector, we are passionate about making it a memorable, inspiring and uplifting experience.</div>
-                            <a href="#" class="body-link">View more at About us></a>
+                            <a href="shop-by-artist.html" class="body-link">View more at About us></a>
                             <h6>AS SEEN IN</h6>
-                            <div class="logo-wrap row">
-                                <div class="col-3">
-                                    <img src="img/image-3@2x.png" alt="">
+                            <div class="logo-wrap row no-gutters d-flex justify-content-around">
+                                <div class="col-md-3 col-12 logo">
+                                    <img src="img/image-3.png" alt="">
                                 </div>
-                                <div class="col-3">
-                                    <img src="img/image-2@2x.png" alt="">
+                                <div class="col-md-3 col-12 logo">
+                                    <img src="img/image-2.png" alt="">
                                 </div>
-                                <div class="col-3">
-                                    <img src="img/image-1@2x.png" alt="">
+                                <div class="col-md-3 col-12 logo">
+                                    <img src="img/image-1.png" alt="">
                                 </div>
-                                <div class="col-3">
-                                    <img src="img/visi-masthead@2x.png" alt="">
+                                <div class="col-md-3 col-12 logo">
+                                    <img src="img/visi-masthead.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -132,34 +155,36 @@
             <!-- //End About section -->
             
             <!-- Beginning Why buy from Section -->
-            <section class="Why-buy-from-us row">
+            <section class="why-buy-from-us bg-light-gray">
                 <h2>Why buy from us?</h2>
                 <div class="container">
-                    <div class="col-md-4 col-12 feature-item">
-                        <div class="carousel-figure">
-                            <img src="svg/accessible-icon.svg" alt="">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 col-12 feature-item">
+                            <div class="carousel-figure">
+                                <img src="svg/accessible-icon.svg" alt="">
+                            </div>
+                            <div class="content">
+                                <span>Art made accessible</span>
+                                <p>We believe art is for everyone and that everyone should own art. We believe artists can make a living doing what they love and that anyone can easily find and buy original art, no matter their taste or budget.</p>
+                            </div>
                         </div>
-                        <div class="content">
-                            <span>Art made accessible</span>
-                            <p>We believe art is for everyone and that everyone should own art. We believe artists can make a living doing what they love and that anyone can easily find and buy original art, no matter their taste or budget.</p>
+                        <div class="col-md-4 col-12 feature-item">
+                            <div class="carousel-figure">
+                                <img src="svg/curated-icon.svg" alt="">
+                            </div>
+                            <div class="content">
+                                <span>Quality curated</span>
+                                <p>Whether you are a first-time art buyer or seasoned collector we connect you with the artists you love. We believe in art with a message, that’s made to last, in quality and authenticity. We believe in supporting the local creative economy of artists, art suppliers and building a new generation of art collectors one mouse click at time.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-12 feature-item">
-                        <div class="carousel-figure">
-                            <img src="svg/curated-icon.svg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>Quality curated</span>
-                            <p>Whether you are a first-time art buyer or seasoned collector we connect you with the artists you love. We believe in art with a message, that’s made to last, in quality and authenticity. We believe in supporting the local creative economy of artists, art suppliers and building a new generation of art collectors one mouse click at time.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 feature-item">
-                        <div class="carousel-figure">
-                            <img src="svg/service-icon.svg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>At your service</span>
-                            <p>Buying art should be as enjoyable as living with art. A seamless online buying experience, that leads to your artwork framed, delivered to your door and ready to be hung on your wall. We stand for art made accessible and art collecting made simple.</p>
+                        <div class="col-md-4 col-12 feature-item">
+                            <div class="carousel-figure">
+                                <img src="svg/service-icon.svg" alt="">
+                            </div>
+                            <div class="content">
+                                <span>At your service</span>
+                                <p>Buying art should be as enjoyable as living with art. A seamless online buying experience, that leads to your artwork framed, delivered to your door and ready to be hung on your wall. We stand for art made accessible and art collecting made simple.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,7 +194,7 @@
             <!-- Beginning discover section -->
             <section class="discover-section">
                 <div class="container">
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="grid-item">
                             <h2><span>DISCOVER</span> <span class="designation">BY MEDIUM</span></h2>
                             <a href="#">COLLECT NOW</a>
@@ -208,12 +233,12 @@
             <!-- //End discover section -->
             
             <!-- Beginning meet artfull's section -->
-            <section class="meet-art-section">
+            <section class="meet-art-section bg-light-gray">
                 <div class="container lead-container">
                     <div class="row">
-                        <div class="col-12">
-                            <h5>MEET ARTFULL’S</h5>
-                            <h2>KHOLISA THOMAS</h2>
+                        <div class="col-12 lead-text-wrap">
+                            <h6>MEET ARTFULL’S</h6>
+                            <h3>KHOLISA THOMAS</h3>
                             <p>Passionate about bridging the gap between the art world and art lovers, Kholisa founded artfull, to provide a platform for emerging artists to show and sell their work and for would-be collectors to engage with them in a meaningful and uplifting way. </p>
                             <a href="#" class="body-link"> View more at KHOLISA> </a>
                         </div>
@@ -229,39 +254,33 @@
                         <div class="col-12">
                             <h6>A Word from Happy Collectors</h6>
                             <div class="testimonial-carousel" id="testimonial-carousel">
-                                <div class="carousel-item">
+                                <div class="testimonial-carousel-item">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <p>Kholisa introduced us to SA artists whose pieces were not just pleasing to our eyes, but had a much deeper connection to our souls, relatable to our own story and equally as important, had a promise of value from an investment perspective -a perfect combination for great art.</p>
-                                            <cite>Buysiwe Makhunga</cite>
-                                        </div>
-                                        <div class="col-6">
-                                            <p>Kholisa Thomas is an exceptionally phenomenal art advisor who has give me a new meaning to art. Having worked with her in the past two years, she beautifully added character to my walls with amazing South African talent.</p>
-                                            <cite>Bongiwe Mkhize</cite>
+                                        <div class="col-12">
+                                            <div class="content">
+                                                <p>Kholisa introduced us to SA artists whose pieces were not just pleasing to our eyes, but had a much deeper connection to our souls, relatable to our own story and equally as important, had a promise of value from an investment perspective -a perfect combination for great art.</p>
+                                                <cite>Buysiwe Makhunga</cite>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="testimonial-carousel-item">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <p>Kholisa introduced us to SA artists whose pieces were not just pleasing to our eyes, but had a much deeper connection to our souls, relatable to our own story and equally as important, had a promise of value from an investment perspective -a perfect combination for great art.</p>
-                                            <cite>Buysiwe Makhunga</cite>
-                                        </div>
-                                        <div class="col-6">
-                                            <p>Kholisa Thomas is an exceptionally phenomenal art advisor who has give me a new meaning to art. Having worked with her in the past two years, she beautifully added character to my walls with amazing South African talent.</p>
-                                            <cite>Bongiwe Mkhize</cite>
+                                        <div class="col-12">
+                                            <div class="content">
+                                                <p>Kholisa Thomas is an exceptionally phenomenal art advisor who has give me a new meaning to art. Having worked with her in the past two years, she beautifully added character to my walls with amazing South African talent.</p>
+                                                <cite>Bongiwe Mkhize</cite>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="testimonial-carousel-item">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <p>Kholisa introduced us to SA artists whose pieces were not just pleasing to our eyes, but had a much deeper connection to our souls, relatable to our own story and equally as important, had a promise of value from an investment perspective -a perfect combination for great art.</p>
-                                            <cite>Buysiwe Makhunga</cite>
-                                        </div>
-                                        <div class="col-6">
-                                            <p>Kholisa Thomas is an exceptionally phenomenal art advisor who has give me a new meaning to art. Having worked with her in the past two years, she beautifully added character to my walls with amazing South African talent.</p>
-                                            <cite>Bongiwe Mkhize</cite>
+                                        <div class="col-12">
+                                            <div class="content">
+                                                <p>Kholisa introduced us to SA artists whose pieces were not just pleasing to our eyes, but had a much deeper connection to our souls, relatable to our own story and equally as important, had a promise of value from an investment perspective -a perfect combination for great art.</p>
+                                                <cite>Buysiwe Makhunga</cite>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -278,7 +297,7 @@
         <footer class="main-footer-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-2 footer-widget">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
                         <h6>ABOUT</h6>
                         <ul>
                             <li><a href="#">artfull</a></li>
@@ -287,7 +306,7 @@
                             <li><a href="#">Artists</a></li>
                         </ul>
                     </div>
-                    <div class="col-2 footer-widget">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
                         <h6>COLLECTORS</h6>
                         <ul>
                             <li><a href="#">Shipping</a></li>
@@ -296,19 +315,19 @@
                             <li><a href="#">FAQ’s</a></li>
                         </ul>
                     </div>
-                    <div class="col-2 footer-widget">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
                         <h6>ARTISTS</h6>
                         <ul>
                             <li><a href="#">Submissions</a></li>
                         </ul>
                     </div>
-                    <div class="col-2 footer-widget">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
                         <h6>THE FINE PRINT</h6>
                         <ul>
                             <li><a href="#">Terms and Conditions</a></li>
                         </ul>
                     </div>
-                    <div class="col-2 footer-widget">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
                         <h6>SHARE &amp; FOLLOW</h6>
                         <div class="social-wrap">
                             <a href="#"><img src="svg/facebook-icon.svg" alt=""></a>
@@ -317,7 +336,7 @@
                             <a href="#"><img src="svg/youtube-icon.svg" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-2 footer-widget">
+                    <div class="col-lg-2 col-md-4 col-12 footer-widget">
                         <h6>CONTACT US</h6>
                         <ul>
                             <li><a href="#">Let us help you</a></li>
@@ -334,6 +353,52 @@
     <script src="./js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="./js/popper.min.js" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+        // Hero section slider
+        var heroSlider = $("#hero-slider");
+        heroSlider.slick({
+          dots: false,
+          arrows: false,
+          infinite: true,
+          speed: 800,
+          slidesToShow: 1,
+        });
+        $(".hero-slider-cotroller .prev").click(function(e){
+            e.preventDefault();
+            heroSlider.slick("prev");
+        })
+        $(".hero-slider-cotroller .next").click(function(e){
+            e.preventDefault();
+            heroSlider.slick("next");
+        });
+        
+        // Testimonial carousel function
+        var testimonialCarousel = $("#testimonial-carousel");
+        testimonialCarousel.slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 800,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          responsive: [{
+
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              }
+
+            }, {
+
+              breakpoint: 300,
+              settings: {
+                slidesToShow: 1,
+              }
+
+          }]
+        });
+    </script>
 </body>
 
 </html>

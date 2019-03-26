@@ -1,28 +1,45 @@
 // Colors
-$base-text: #111a27;
+$base-text: #414042;
 $base-bg: #ffffff;
-$secondary-color: #f2f2f0;
-$tertiary-color: #949494;
-$theme-red: #bc2629;
-$base-transparent: rgba(17, 26, 39, .7);
+$light-gray: rgba(247, 246, 246, 0.4);
+$body-link-color: #daa92c;
+$box-shadow: inset 0 1px 8px 0 rgba(0, 0, 0, 0.48);
+$gray-border: #979797;
 
-// Color extend 
-%whiteColor{
-    color: $base-bg;
-}
-
-%whiteBackground{
+body{
+    color: $base-text;
     background-color: $base-bg;
 }
 
-%baseTextColor{
+// Header top right link color
+.top-right-link-wrap{
+    a{
+        color: $base-text;
+    }
+}
+
+// Header nav color 
+.nav-link{
     color: $base-text;
 }
 
-%baseTextBgColor{
-    background-color: $base-text;
+// Body link color
+.body-link{
+    color: $body-link-color;
 }
 
-%baseGrayColor{
-    color: $tertiary-color;
+.bg-light-gray{
+    @extend %bgLightGray;
+}
+
+
+// Footer link color
+.footer-widget{
+    ul{
+        li{
+            a{
+                color: $base-text;
+            }
+        }
+    }
 }

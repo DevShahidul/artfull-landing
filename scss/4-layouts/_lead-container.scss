@@ -1,0 +1,19 @@
+.lead-container{    
+    @include media-breakpoint-up(lg){
+        max-width: 1015px;
+    }
+}
+.lead-text-wrap{
+    padding-top: 50px;
+    h3{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    h6{
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .lead-text{
+        padding-bottom: 16px;
+    }
+}

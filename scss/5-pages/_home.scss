@@ -1,0 +1,144 @@
+/* About section style */
+.about-section{
+    padding-top: 6px;
+    h6{
+        text-align: center;
+        margin-top: 35px;
+    }
+    .logo-wrap{
+        margin-top: 39px;
+        padding: 0 11px;
+        .logo{
+            text-align: center;
+        }
+    }
+}
+
+.why-buy-from-us{
+    margin-top: 55px; 
+    padding: 40px 0 35px;
+    h2{
+        text-align: center;
+    }
+}
+
+/* Feature item section style */
+.feature-item{
+    margin-top: 29px;
+    .carousel-figure{
+        float: left;
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        margin-right: 30px;
+        @include media-breakpoint-down(md){
+            clear: both;
+        }
+        @include media-breakpoint-down(sm){
+            clear: none;
+        }
+    }
+    .content{
+        float: left;
+        width: -webkit-calc(100% - 103px);
+        width: calc(100% - 103px);
+        padding-right: 29px;
+        @include media-breakpoint-down(md){
+            width: 100%;
+            margin-top: 30px;
+        }
+        @include media-breakpoint-down(sm){
+            width: -webkit-calc(100% - 103px);
+            width: calc(100% - 103px);
+            margin-top: 0px;
+        }
+        span{
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+}
+
+/* Discover section style */
+.discover-section{
+    padding-top: 10px;
+    padding-bottom: 77px;
+    .grid-item{
+        @include grid(1, 0);
+        margin-top: 46px;
+        @include media-breakpoint-up(md){
+            
+            &:nth-child(n){
+                margin-right: 3.787878787878788%;
+            }
+            @include grid(2, 3.787878787878788%);
+        }
+        @include media-breakpoint-up(lg){
+            &:nth-child(n){
+                margin-right: 3.787878787878788%;
+            }
+            @include grid(4, 3.787878787878788%);
+        }
+        @include media-breakpoint-up(xl){
+            &:nth-child(n){
+                margin-right: 3.787878787878788%;
+            }
+            @include grid(5, 3.787878787878788%);
+        }
+        h2{
+            padding-top: 59px;
+            padding-bottom: 58px;
+            margin-bottom: 24px;
+            text-align: center;
+            border: 2px solid $base-text;
+            border-left: 0;
+            border-right: 0;
+            span{
+                display: inline-block;
+            }
+        }
+        a{
+            display: block;
+            padding: 11px 10px 7px;
+            text-align: center;
+            background-color: $base-text;
+            color: $white;
+        }
+    }   
+}
+
+/* Meet art section style */
+.meet-art-section{
+    padding: 35px 0;
+}
+
+/* Testimonial section style */
+.testimonial-section{
+    padding-top: 50px;
+    h6{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .testimonial-carousel{
+        padding: 0 68px;
+        .content{
+            padding-left: 42px;
+            padding-right: 25px;
+            position: relative;
+            &:before{
+                position: absolute;
+                left: 0; 
+                top: 0;
+                content: "";
+                width: 17px; 
+                height: 14px;
+                background-image: url(../img/quote-left-icon.png);
+                @extend %bgProperty;
+            }
+        }
+        cite{
+            font-style: normal;
+            padding-top: 5px;
+        }
+    }
+}
