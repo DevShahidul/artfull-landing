@@ -6,7 +6,7 @@
         margin-top: 35px;
     }
     .logo-wrap{
-        margin-top: 39px;
+        margin-top: 25px;
         padding: 0 11px;
         .logo{
             text-align: center;
@@ -15,16 +15,21 @@
 }
 
 .why-buy-from-us{
-    margin-top: 55px; 
-    padding: 40px 0 35px;
-    h2{
+    margin-top: 35px; 
+    padding: 35px 0;
+    h3{
         text-align: center;
+        text-transform: uppercase;
+        @include media-breakpoint-down(sm){
+            padding: 0 15px;
+        }
     }
 }
 
 /* Feature item section style */
 .feature-item{
-    margin-top: 29px;
+    margin-top: 20px;
+    padding: 0;
     .carousel-figure{
         float: left;
         width: 73px;
@@ -42,7 +47,7 @@
         float: left;
         width: -webkit-calc(100% - 103px);
         width: calc(100% - 103px);
-        padding-right: 29px;
+        padding-right: 20px;
         @include media-breakpoint-down(md){
             width: 100%;
             margin-top: 30px;
@@ -51,6 +56,9 @@
             width: -webkit-calc(100% - 103px);
             width: calc(100% - 103px);
             margin-top: 0px;
+        }
+        p{
+            line-height: 19px;
         }
         span{
             margin-bottom: 10px;
@@ -61,11 +69,13 @@
 
 /* Discover section style */
 .discover-section{
-    padding-top: 10px;
-    padding-bottom: 77px;
+    padding-top: 6px;
+    padding-bottom: 78px;
     .grid-item{
+        position: relative;
         @include grid(1, 0);
-        margin-top: 46px;
+        margin-top: 50px;
+        text-align: center;
         @include media-breakpoint-up(md){
             
             &:nth-child(n){
@@ -88,13 +98,13 @@
         h2{
             padding-top: 59px;
             padding-bottom: 58px;
-            margin-bottom: 24px;
+            margin-bottom: 68px;
             text-align: center;
             border: 2px solid $base-text;
             border-left: 0;
             border-right: 0;
             span{
-                display: inline-block;
+                display: block;
             }
         }
         a{
@@ -103,13 +113,18 @@
             text-align: center;
             background-color: $base-text;
             color: $white;
+            position: absolute;
+            left: 0; 
+            bottom: 0;
+            width: 100%;
         }
     }   
 }
 
 /* Meet art section style */
 .meet-art-section{
-    padding: 35px 0;
+    padding: 0 0 35px;
+    .lead-text-wrap{padding-top: 35px;}
 }
 
 /* Testimonial section style */
@@ -121,6 +136,9 @@
     }
     .testimonial-carousel{
         padding: 0 68px;
+        @include media-breakpoint-down(sm){
+            padding: 0 40px;
+        }
         .content{
             padding-left: 42px;
             padding-right: 25px;
@@ -135,10 +153,15 @@
                 background-image: url(../img/quote-left-icon.png);
                 @extend %bgProperty;
             }
+            @include media-breakpoint-down(sm){
+                padding-left: 25px;
+                padding-right: 0;
+            }
         }
         cite{
             font-style: normal;
-            padding-top: 5px;
+            padding-top: 15px;
+            display: block;
         }
     }
 }

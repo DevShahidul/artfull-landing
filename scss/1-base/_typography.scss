@@ -74,22 +74,38 @@ a{
 h2{
    @include fonts(38px, 45px, $font-stack-marion-regular);
    letter-spacing: 1.11px;
+    @include media-breakpoint-down(sm){
+        font-size: 30px;
+        line-height: 35px;
+    }
 }
 
 h3{
    @include fonts(36px, 42px, $font-stack-marion-regular);
    letter-spacing: 1.05px;
+    @include media-breakpoint-down(sm){
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 
 h5{
     @include fonts(22px, 26px, $d-font-family);
     letter-spacing: 0.64px;
+    @include media-breakpoint-down(sm){
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 h6{
     @include fonts(18px, 21px, $trebuchet-font);
     letter-spacing: 0.53px;
     text-transform: uppercase;
+    @include media-breakpoint-down(sm){
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 // button
@@ -117,12 +133,22 @@ h6{
 }
 
 .nav-link{
-    @include fonts(22px, 26px, $trebuchet-font)
+    @include fonts(22px, 26px, $trebuchet-font);
+    
+    @include media-breakpoint-down(sm){
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 .caption-content{
     h2{
         font-size: 35px;
+        line-height: 35px;
+    }
+    
+    @include media-breakpoint-down(sm){
+        font-size: 30px;
         line-height: 35px;
     }
 }
@@ -148,13 +174,18 @@ h6{
 .discover-section{
     .grid-item{
         h2{
+            line-height: 30px;
             span{
+                line-height: 34px;
                 &.designation{
                     font-size: 34px;
-                    line-height: 34px;
                     letter-spacing: 0;
                 }
             }
+        }
+        a{
+            font-size: 22px;
+            line-height: 26px;
         }
     }   
 }
@@ -169,6 +200,9 @@ h6{
 
 // Artist style 
 .artist{
+    h5{
+        font-family: $d-font-regular-family;
+    }
     p{
         font-size: 18px;
         line-height: 23px;

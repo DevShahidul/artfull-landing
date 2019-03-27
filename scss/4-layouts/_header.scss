@@ -15,24 +15,30 @@
 }
 // Top bar style
 .top-bar{
-    padding-top: 35px;
-    @include media-breakpoint-up(md){        
-        padding-right: 60px;
-        padding-left: 60px;
+    padding-top: 25px;
+    > span{
+        margin-top: 10px;
+        display: inline-block;
+    }
+    @include media-breakpoint-up(lg){        
+        padding-right: 45px;
+        padding-left: 45px;
     }
 }
 
 .top-right-link-wrap{
     a{
-        padding: 0 13px;
+        display: inline-block;
+        padding: 0px 15px;
+        margin-top: 10px;
         position: relative;
         &:before{
             position: absolute; 
-            left: -1px; 
+            left: -3px; 
             top: 50%;
             @include transform(translateY(-50%));
             content: "";
-            height: 14px;
+            height: 10px;
             width: 2px;
             background: $base-text;
         }
@@ -46,6 +52,8 @@
 }
 .search-form{
     margin-left: 13px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .header-search-triger{

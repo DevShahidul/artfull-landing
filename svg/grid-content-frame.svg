@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="203" height="260" viewBox="0 0 203 260">
+    <g fill="none" fill-rule="evenodd">
+        <path fill-rule="nonzero" stroke="#414042" stroke-linecap="square" stroke-width="2" d="M1.61 1.5H201.5M1.61 191H201.5"/>
+        <path fill="#414042" fill-rule="nonzero" d="M0 216h201v44H0z"/>
+        <text fill="#FFF" font-family="AkzidenzGroteskBQ-Reg, Akzidenz-Grotesk BQ" font-size="22" letter-spacing=".642" transform="translate(0 1)">
+            <tspan x="16.231" y="247">COLLECT NOW</tspan>
+        </text>
+    </g>
+</svg>
