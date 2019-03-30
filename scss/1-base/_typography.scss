@@ -1,11 +1,17 @@
 // roboto font face
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
 
-// Akzidenzgrotesk font face
+// Akzidenzgrotesk light font face
 @include font-face("akzidenzgrotesk_bq_light", "../fonts/akzidenzgrotesk_bq_light_regular-webfont");
 
-// Akzidenzgrotesk font face
+// Akzidenzgrotesk regular font face
 @include font-face("akzidgrostd_regular", "../fonts/akzidgrostdreg-webfont");
+
+// Akzidenzgrotesk Mediam italic font face
+@include font-face("akzidgrostd_medita", "../fonts/akzidgrostdmedita-webfont");
+
+// Akzidenzgrotesk Mediam font face
+@include font-face("akzidgrostd_mediam", "../fonts/akzidgrostdmed-webfont");
 
 // marion-regular-webfont font face 
 @include font-face("marion-regular-webfont", "../fonts/marion-regular-webfont");
@@ -19,6 +25,18 @@ $font-stack-akzidenzgrotesk_bq_light: (
 // Akzidenzgrotesk Regular Fonts stack
 $font-stack-akzidenzgrotesk_bq_regular:(
   "akzidgrostd_regular",
+  sans-serif,
+);
+
+// Akzidenzgrotesk mediamitalic Fonts stack
+$font-stack-akzidgrostd_medita:(
+  "akzidgrostd_medita",
+  sans-serif,
+);
+
+// Akzidenzgrotesk mediam Fonts stack
+$font-stack-akzidgrostd_mediam:(
+  "akzidgrostd_mediam",
   sans-serif,
 );
 
@@ -40,6 +58,8 @@ $d-line-height: 20px;
 $d-font-weight: 400;
 $nav-font-size: 22px;
 $d-font-family: $font-stack-akzidenzgrotesk_bq_light;
+$d-font-family-mediam-italic: $font-stack-akzidgrostd_medita;
+$d-font-family-mediam: $font-stack-akzidgrostd_mediam;
 $d-font-regular-family: $font-stack-akzidenzgrotesk_bq_regular;
 $trebuchet-font: $font-stack-Trebuchet_MS;
 $nav-line-height: $nav-font-size + 3;
@@ -61,6 +81,11 @@ body{
     -webkit-font-smoothing:antialiased; 
     @include fonts(16px, 18px);
     letter-spacing: 0.05px;
+    @include media-breakpoint-down(sm){
+        font-size: 9px;
+        line-height: 13px;
+        letter-spacing: .03;
+    }    
 }
 
 a{
@@ -75,8 +100,8 @@ h2{
    @include fonts(38px, 45px, $font-stack-marion-regular);
    letter-spacing: 1.11px;
     @include media-breakpoint-down(sm){
-        font-size: 30px;
-        line-height: 35px;
+        font-size: 22px;
+        line-height: 25px;
     }
 }
 
@@ -84,8 +109,8 @@ h3{
    @include fonts(36px, 42px, $font-stack-marion-regular);
    letter-spacing: 1.05px;
     @include media-breakpoint-down(sm){
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 
@@ -93,8 +118,8 @@ h5{
     @include fonts(22px, 26px, $d-font-family);
     letter-spacing: 0.64px;
     @include media-breakpoint-down(sm){
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 10px;
+        line-height: 16px;
     }
 }
 
@@ -103,8 +128,8 @@ h6{
     letter-spacing: 0.53px;
     text-transform: uppercase;
     @include media-breakpoint-down(sm){
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 10px;
+        line-height: 12px;
     }
 }
 
@@ -121,24 +146,67 @@ h6{
     letter-spacing: 0.75px;
 }
 
+.top-right-link-wrap{
+    a{
+        @include media-breakpoint-down(sm){
+            font-size: 10px;
+            line-height: 11px;
+        }
+    }
+}
+
 // lead text
 .lead-text{
     @include fonts(18px, 23px);
+    @include media-breakpoint-down(sm){
+        @include fonts(12px, 18px);
+        letter-spacing: 0;
+    }
 }
 
 .body-link{
     @include fonts(15px, 26px, $d-font-regular-family);
     letter-spacing: 0.05px;
     text-transform: uppercase;
+    @include media-breakpoint-down(sm){
+        font-size: 9px;
+        line-height: 11px;
+        letter-spacing: 0;
+    }
 }
 
-.nav-link{
+.nav-link, 
+.dropdown-item{
     @include fonts(22px, 26px, $trebuchet-font);
+    @include media-breakpoint-down(md){
+        font-size: 18px;
+    }
     
     @include media-breakpoint-down(sm){
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 10px;
+        line-height: 11px;
+        letter-spacing: 0.42px;
     }
+}
+
+.slider-caption{
+    h5{
+        line-height: 22px;
+        @include media-breakpoint-down(sm){
+            font-size: 6px;
+            line-height: 8px;
+            letter-spacing: 0.19px;
+        }
+    }
+    h3{
+        line-height: 37px; 
+        @include media-breakpoint-down(sm){
+            font-size: 10px;
+            line-height: 10px;
+            letter-spacing: 0.44px;
+        }
+    }   
+    
 }
 
 .caption-content{
@@ -166,6 +234,10 @@ h6{
         span{
             @include fonts(16px, 19px, $d-font-regular-family);
             text-transform: uppercase;
+            @include media-breakpoint-down(sm){
+                font-size: 9px;
+                line-height: 11px;
+            }
         }
     }
 }
@@ -180,12 +252,19 @@ h6{
                 &.designation{
                     font-size: 34px;
                     letter-spacing: 0;
+                    @include media-breakpoint-down(sm){
+                        font-size: 20px;
+                    }
                 }
             }
         }
         a{
             font-size: 22px;
             line-height: 26px;
+            @include media-breakpoint-down(sm){
+                font-size: 13px;
+                line-height: 15px;
+            }
         }
     }   
 }
@@ -194,6 +273,11 @@ h6{
     .content{
         font-size: 18px;
         line-height: 23px;
+        @include media-breakpoint-down(sm){
+            font-size: 10px;
+            line-height: 16px;
+            letter-spacing: 0;
+        }
     }
 }
 
@@ -206,6 +290,10 @@ h6{
     p{
         font-size: 18px;
         line-height: 23px;
+        @include media-breakpoint-down(sm){
+            font-size: 9px;
+            line-height: 13px;
+        }
     }
 }
 
@@ -220,7 +308,140 @@ h6{
             a{
                 @include fonts(16px, 23px, $trebuchet-font);
                 letter-spacing: 0.86px;
+                @include media-breakpoint-down(sm){
+                    @include fonts(10px, 16px, $trebuchet-font);
+                    letter-spacing: 0;                    
+                }
             }
+        }
+    }
+}
+
+
+.product-figure-wrapper{
+    .product-thumbnail-wrap{
+        h6{
+            font-family: $d-font-family;
+            text-transform: inherit;
+        }
+    }
+}
+
+.product-figure-wrapper{
+    .button-wrap{
+        span{
+            @include fonts(9px, 14px, $d-font-regular-family);
+            letter-spacing: -0.21px;
+        }
+    }   
+}
+
+.total-price-wrap{
+    .btn.bg-primary{
+        font-size: 26px;
+        font-family: $d-font-family-mediam-italic;
+    }
+    
+    h5{
+        font-family: $d-font-regular-family;
+        sub{
+            font-size: 12px;
+            letter-spacing: 0.07px;
+        }
+    }
+}
+
+.product-info-wrap{
+    h5{
+        @include fonts(20px, 23px, $d-font-regular-family);
+        em{
+            font-family: $d-font-family;
+        }
+        @include media-breakpoint-down(sm){
+            @include fonts(10px, 16px);
+        }
+    }
+    .info{
+        ul{
+            li{
+                @include fonts(20px, 46px);
+                letter-spacing: 0.16px;
+                @include media-breakpoint-down(sm){
+                    @include fonts(10px, 16px);
+                }
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 27px;
+            @include media-breakpoint-down(sm){
+                @include fonts(9px, 13px);
+            }
+        }
+    }
+    .select-frame-section{
+        h6{
+            font-family: $d-font-regular-family;
+            letter-spacing: 0.06px;
+            @include media-breakpoint-down(sm){
+                @include fonts(10px, 12px);
+            }
+        }
+
+        p{
+            @include fonts(14px, 22px);
+            letter-spacing: 0.04px;
+            @include media-breakpoint-down(sm){
+                @include fonts(9px, 13px);
+            }
+
+        }
+    }
+}
+
+
+.product-info-wrapper{
+    h6{
+        @include fonts(16px, 22px, $d-font-regular-family);
+        @include media-breakpoint-down(sm){
+            @include fonts(10px, 16px);
+        }
+    }
+    p{
+        @include fonts(20px, 23px);
+        @include media-breakpoint-down(sm){
+            @include fonts(9px, 13px);
+        }
+    }
+}
+
+.read-more{
+    @include fonts(18px, 23px, $d-font-regular-family);
+    text-transform: uppercase;
+    @include media-breakpoint-down(sm){
+        @include fonts(9px, 11px);
+    }
+}
+
+.aditional-info{
+    .small-title{
+        line-height: 22px;
+        font-family: $d-font-regular-family;
+    }
+}
+
+.work-item{
+    .author{
+        @include fonts(22px, 40px, $d-font-family-mediam); 
+        @include media-breakpoint-down(sm){
+            @include fonts(10px, 16px);
+        }
+    }
+    .catagory,
+    p{
+        @include fonts(22px, 40px); 
+        @include media-breakpoint-down(sm){
+            @include fonts(9px, 13px);
         }
     }
 }

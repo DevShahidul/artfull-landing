@@ -6,8 +6,46 @@
         padding-left: 45px;
     }
     @include media-breakpoint-down(md){
-        padding-right: 0;
-        padding-left: 0;
+        .navbar-nav{
+            width: 75%;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        padding: 12px 0;
+        width: 137px;
+        .navbar-toggler{
+            padding: 0;
+            margin-top: 0;
+            width: 17px;
+            height: 20px;
+            border: 0;
+            outline: none;
+            &:focus{
+                outline: none;
+            }
+            span{
+                background-image: none;
+                width: 17px;
+                display: block;
+                height: 2px;
+                background: $nav-icon-color;
+                position: relative;
+                margin-top: 3px;
+                &::before,
+                &::after{
+                    content: "";
+                    width: 17px;
+                    height: 2px;
+                    background: $nav-icon-color;
+                    margin-top: 5px;
+                    position: absolute;
+                    left: 0;
+                }
+                &::before{
+                    margin-top: -5px;
+                }
+            }
+        }
     }
 }
 
@@ -34,19 +72,113 @@
 
 .navbar-brand{
     @include media-breakpoint-down(md){
-        width: 160px;
+        width: 100px;
+        margin-left: 20px;
     }
 }
 
 #navbarMobile{
+    width: 100vw;
     @include media-breakpoint-down(sm){
-        clear: both;
-        width: 100%;
+        padding-top: 0;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        z-index: 9;
+        background: rgba(50, 50, 50, .59);
+        .navbar-inner{
+            background: #ffffff;
+            width: 48.75%;
+            height: 100vh;
+        }
         .navbar-nav{
-            padding-top: 30px;
+            padding-top: 0px;
+            flex-flow: row wrap;
+            max-height: calc(100vh - 59px);
+            overflow-y: scroll;
             .nav-item{
-                margin: 10px 0;
+                width: 100%;
+                margin: 0;
+                padding: 11px 12px;
+                border-bottom: 1px solid $navMobiBorder;
+            }
+            .dropdown-toggle{
+                position: relative;
+                &::after{
+                    width: 6px;
+                    height: 6px;
+                    border: 0;
+                    background-image: url(../svg/plus-icon.svg);
+                    background-position: center center; 
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    right: 15px;
+                    top: 3px;
+                }
+            }
+            .show{
+                & > .dropdown-toggle{
+                    &::after{
+                        background-image: url(../svg/minus-icon.svg);
+                    }
+                }
+                & > .dropdown-menu{
+                    &.show{
+                        padding-bottom: 0;
+                        li{
+                            &:last-child{
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav-social{
+            padding: 12px 12px 30px;
+        }
+        .dropdown-menu{
+            min-width: 10px;
+            width: 100%;
+            border: 0;
+            box-shadow: 0;
+            li{
+                padding: 11px 8px;
+                border-top: 1px solid $navMobiBorder;
+                .dropdown-item{
+                    padding: 0;
+                }                
             }
         }
     }
+}
+.close-nav{
+    position: fixed;  
+    top: 5px; 
+    left: 90vw;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    div{
+        position: relative;
+        width: 20px; 
+        height: 2px;
+        margin-top: 9px;
+        &:before,
+        &:after{
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 20px;
+            height: 2px;
+            background-color: $body-link-color;
+            @include transform(rotate(-45deg));
+        }
+        &:after{
+            @include transform(rotate(45deg));
+        }
+    }
+    
 }

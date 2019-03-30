@@ -1,4 +1,5 @@
 $heroHeight: 565px;
+$heroHeightMobi: 126px;
 
 .hero-slider{
     .slick-arrow{
@@ -14,9 +15,15 @@ $heroHeight: 565px;
 }
 .slider-wrap{
     min-height: $heroHeight;
+    @include media-breakpoint-down(sm){
+        min-height: $heroHeightMobi;
+    }
     @extend %bgProperty;
     .container{
         min-height: $heroHeight;
+        @include media-breakpoint-down(sm){
+            min-height: $heroHeightMobi;
+        }
     }
     .slider-caption-wrap{
         bottom: 63px;
@@ -24,6 +31,7 @@ $heroHeight: 565px;
         @include media-breakpoint-down(sm){
             left: 15px;
             right: 15px;
+            bottom: 23px;
         }
     }
 }
@@ -31,20 +39,22 @@ $heroHeight: 565px;
 .slider-caption-inner{
     border: 2px solid $base-bg;
     padding: 7px;
+    display: inline-block;
 }
 .slider-caption{
     background-color: rgba(255, 255, 255, 0.76);
     padding: 30px 40px;
+    @include media-breakpoint-down(sm){
+        padding: 13px 15px;
+    }
     h3{
         text-transform: uppercase;
-        line-height: 37px; 
         margin-bottom: 0;
     }
     h5{
-        line-height: 22px;
         margin-bottom: 0;
         @include media-breakpoint-down(sm){
-            margin-bottom: 10px;
+            //margin-bottom: 10px;
         }
     }
     .play-video{
@@ -52,16 +62,24 @@ $heroHeight: 565px;
         height: 73px;
         border-radius: 50%;
         margin-right: 40px;
+        img{
+            max-width: 100%;
+        }
         @include media-breakpoint-down(sm){
-            display: block;
+            /*display: block;
             margin: 0 auto;
-            clear: both;
+            clear: both;*/
+            width: 20px; 
+            height: 20px;
+            margin-right: 12px;
+            display: inline-block;
         }
     }
     .caption-content{
         @include media-breakpoint-down(sm){
-            width: 100%;
-            margin-top: 30px;
+            /*width: 100%;
+            margin-top: 30px;*/
+            display: inline-block;
         }
     }
 }
@@ -70,6 +88,9 @@ $heroHeight: 565px;
     left: 0; right: 0; top: 0; bottom: 0;
     .container{
         min-height: $heroHeight;
+        @include media-breakpoint-down(sm){
+            min-height: $heroHeightMobi;
+        }
     }
 }
 
@@ -93,15 +114,31 @@ $heroHeight: 565px;
         left: auto;
         right: 0;
     }
+    @include media-breakpoint-down(sm){ 
+        width: 11px;
+        height: 11px;
+        &::before,
+        &::after{
+            width: 11px !important;
+            height: 11px !important;
+        }
+    }
 }
 
 .slick-prev, 
 .slick-next{
     width: 38px; 
     height: 38px;
+    @include media-breakpoint-down(sm){ 
+        width: 11px;
+        height: 11px;
+    }
 }
 
 .hero-section{
     min-height: $heroHeight;
+    @include media-breakpoint-down(sm){
+        min-height: $heroHeightMobi;
+    }
     @extend %bgProperty;
 }

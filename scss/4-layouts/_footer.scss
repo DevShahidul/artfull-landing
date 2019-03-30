@@ -2,10 +2,20 @@
     margin-top: 88px;
     padding-bottom: 62px;
     border-top: 1px solid $gray-border;
+    @include media-breakpoint-down(sm){
+        margin-top: 20px;
+        padding-bottom: 25px;
+    }
     .footer-widget{
         margin-top: 54px;
+        @include media-breakpoint-down(sm){
+            margin-top: 20px;
+        }
         h6{
             margin-bottom: 10px;
+            @include media-breakpoint-down(sm){
+                margin-bottom: 3px;
+            }
         }
         ul{
             list-style: none;

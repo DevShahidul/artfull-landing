@@ -10,6 +10,13 @@
         padding: 0 11px;
         .logo{
             text-align: center;
+            &:last-child{
+                @include media-breakpoint-down(sm){
+                    img{
+                        max-width: 48.818182%;
+                    }
+                }
+            }
         }
     }
 }
@@ -17,11 +24,15 @@
 .why-buy-from-us{
     margin-top: 35px; 
     padding: 35px 0;
+    @include media-breakpoint-down(sm){
+        padding: 20px 0;
+    }
     h3{
         text-align: center;
         text-transform: uppercase;
         @include media-breakpoint-down(sm){
             padding: 0 15px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -30,6 +41,12 @@
 .feature-item{
     margin-top: 20px;
     padding: 0;
+    @include media-breakpoint-down(sm){
+        &:first-child{
+            margin-top: 0;
+        }
+        margin-top: 15px;
+    }
     .carousel-figure{
         float: left;
         width: 73px;
@@ -41,6 +58,9 @@
         }
         @include media-breakpoint-down(sm){
             clear: none;
+            width: 35px;
+            height: 35px;
+            margin-right: 15px;
         }
     }
     .content{
@@ -53,15 +73,24 @@
             margin-top: 30px;
         }
         @include media-breakpoint-down(sm){
-            width: -webkit-calc(100% - 103px);
-            width: calc(100% - 103px);
+            width: -webkit-calc(100% - 50px);
+            width: calc(100% - 50px);
             margin-top: 0px;
+            padding-right: 0;
         }
         p{
             line-height: 19px;
+            @include media-breakpoint-down(sm){
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
         }
         span{
             margin-bottom: 10px;
+            @include media-breakpoint-down(sm){
+                margin-bottom: 3px;
+            }
             display: block;
         }
     }
@@ -71,13 +100,17 @@
 .discover-section{
     padding-top: 6px;
     padding-bottom: 78px;
+    @include media-breakpoint-down(sm){
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
     .grid-item{
         position: relative;
-        @include grid(1, 0);
-        margin-top: 50px;
+        @include grid(2, 4.285714285714286%);
+        margin-top: 15px;
         text-align: center;
         @include media-breakpoint-up(md){
-            
+            margin-top: 50px;
             &:nth-child(n){
                 margin-right: 3.787878787878788%;
             }
@@ -106,6 +139,11 @@
             span{
                 display: block;
             }
+            @include media-breakpoint-down(sm){
+                padding-top: 36px;
+                padding-bottom: 34px;
+                margin-bottom: 14px;
+            }
         }
         a{
             display: block;
@@ -117,6 +155,9 @@
             left: 0; 
             bottom: 0;
             width: 100%;
+            @include media-breakpoint-down(sm){
+                padding: 6px 16px;
+            }
         }
     }   
 }
@@ -124,20 +165,34 @@
 /* Meet art section style */
 .meet-art-section{
     padding: 0 0 35px;
-    .lead-text-wrap{padding-top: 35px;}
+    @include media-breakpoint-down(sm){
+        padding-bottom: 20px;
+    }
+    .lead-text-wrap{
+        padding-top: 35px;
+        @include media-breakpoint-down(sm){
+            padding-top: 20px;
+        }
+    }
 }
 
 /* Testimonial section style */
 .testimonial-section{
     padding-top: 50px;
+    @include media-breakpoint-down(sm){
+        padding-top: 20px;
+    }
     h6{
         text-align: center;
         margin-bottom: 30px;
+        @include media-breakpoint-down(sm){
+            margin-bottom: 14px;
+        }
     }
     .testimonial-carousel{
         padding: 0 68px;
         @include media-breakpoint-down(sm){
-            padding: 0 40px;
+            padding: 0 11px;
         }
         .content{
             padding-left: 42px;
@@ -152,16 +207,23 @@
                 height: 14px;
                 background-image: url(../img/quote-left-icon.png);
                 @extend %bgProperty;
+                @include media-breakpoint-down(sm){ 
+                    width: 9px;
+                    height: 7px;
+                }
             }
             @include media-breakpoint-down(sm){
-                padding-left: 25px;
-                padding-right: 0;
+                padding-left: 19px;
+                padding-right: 10px;
             }
         }
         cite{
             font-style: normal;
             padding-top: 15px;
             display: block;
+            @include media-breakpoint-down(sm){
+                padding-top: 0;
+            }
         }
     }
 }

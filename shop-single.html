@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/main.css" crossorigin="anonymous">
 
-    <title>Brand | Shop By Artist</title>
+    <title>Brand | Shop Single</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                     <div class="collapse navbar-collapse" id="nav-left">
                       <ul class="nav navbar-nav">
                           <li class="nav-item">
-                              <a class="nav-link" href="#">SHOP</a>
+                              <a class="nav-link" href="shop-by-artist.html">SHOP</a>
                           </li>
                           <li class="nav-item">
                               <a class="nav-link" href="#">GET ARTFULL</a>
@@ -57,7 +57,7 @@
                         </li>
                       </ul>
                     </div>
-
+                    
                     <!-- Mobile -->
                     <div class="collapse" id="navbarMobile">
                        <div class="close-nav" id="close-nav">
@@ -335,61 +335,127 @@
         <!-- //End header section -->
 
         <!-- Beginning main content section -->
-        <div class="main-content shop-by-artist">
-            <!-- Beginning hero section -->
-            <section class="hero-section position-relative" id="hero-section" style="background-image: url(./img/shop-by-artist-hero.jpg);"></section>
-            <!-- //End hero section -->
-            
-            <!-- Beginning DISCOVER ARTISTS -->
-            <section class="discover-artist-section">
+        <div class="main-content">
+            <!-- Beginning item selection setion -->
+            <section class="item-selection-section">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 lead-text-wrap">
-                            <h3>DISCOVER ARTISTS</h3>
-                            <div class="lead-text">We respect, admire and work closely with our artists to offer original art that you will love. We select each artist based on their message, the quality of their work and their long-term creative potential.</div>
+                    <div class="row product-figure-wrapper">
+                        <div class="col-lg-6">
+                            <div class="button-wrap">
+                                <div class="icon-wrap zoome">
+                                    <img src="svg/zoom-icon.svg" alt="">
+                                    <span>ZOOM</span>
+                                </div>
+                                <div class="icon-wrap zoome">
+                                    <img src="svg/wishlist-icon.svg" alt="">
+                                    <span>WISHLIST</span>
+                                </div>
+                                <div class="icon-wrap zoome">
+                                    <img src="svg/share-icon.svg" alt="">
+                                    <span>SHARE</span>
+                                </div>
+                            </div>
+                            <div class="product-thumbnail-wrap text-center">
+                                <figure class="main-figure"><img src="img/large-thumb.jpg" alt="" class="border-white"></figure>
+                                <h6>Roll over to zoom</h6>
+                                <div class="product-thumb-wrap row no-gutters justify-content-center">
+                                    <div class="col-4 small-thumb">
+                                        <figure><img src="img/small-thumb.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col-4 small-thumb">
+                                        <figure><img src="img/small-thumb.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col-4 small-thumb">
+                                        <figure><img src="img/small-thumb.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product-info-wrap">
+                                <h5>THAPELO MOILOA WITH HIS DOG LIMA HA SALEN 2/3 by <em class="author">Thom Pierce</em></h5>
+                                <div class="info">
+                                    <ul>
+                                       <li><span>MEDIUM:</span></li>
+                                       <li><span>SIZE:</span></li>
+                                       <li><span>EDITION:</span></li>
+                                       <li><span>PRICE:</span></li>
+                                    </ul>
+                                    <div class="select-frame-section">
+                                        <h6>Select Frame:</h6>
+                                        <p>Choose from our contemporary black wood, white wood or natural smooth veneer frame.</p>
+                                        <div class="frame-thumb">
+                                            <div class="frame">
+                                                <img src="svg/black-frame.svg" alt="">
+                                            </div>
+                                            <div class="frame">
+                                                <img src="svg/white-frame.svg" alt="">
+                                            </div>
+                                            <div class="frame">
+                                                <img src="svg/natural-frame.svg" alt="">
+                                            </div>
+                                            <div class="frame">
+                                                <img src="svg/no-frame.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="total-price-wrap">
+                                        <h5>Total: <span id="total-price">R2500</span> <sub>*incl. taxes</sub></h5>
+                                        <button type="button" class="btn bg-primary" id="addToCard">Add to Cart</button>
+                                    </div>
+                                    <p><mark>Pricing specific to selected size and frame option.</mark></p>
+                                    <p><mark>As our prints are custom made to order according to your </mark> <mark> specifications, all of our prints are final sale and non-returnable.</mark></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row artist-item-wrap">
-                        <div class="col-12 col-md-4 artist">
-                            <img src="img/Andile-Buka@2x.jpg" alt="">
-                            <h5>Andile Buka</h5>
-                            <p>Daring and driven by the need to create, Andile describes his photography as documentary portraiture work. </p>
-                            <a href="shop-single.html" class="body-link">Find out More ></a>
+                    <div class="row product-info-wrapper">
+                        <div class="col-lg-6 col-12">
+                            <h6>ABOUT THE ARTIST</h6>
+                            <p>Daring and driven by the need to create, Andile is a self-taught Johannesburg based photographer. He describes his photography as documentary portraiture work. His distinct and honest documentation of street style has gained him local and international acclaim. His work has been exhibited in South Africa, Germany, Nigeria, UK, Italy and the US.</p>
+                            <p>Andile’s work is a conduit for storytelling as he navigates different spaces and life. He spends his days on his bicycle drifting through the city, hunting for interesting people and places to photograph.</p>
+                            <a href="#" class="read-more">Read More ></a>
                         </div>
-                        <div class="col-12 col-md-4 artist">
-                            <img src="img/Mbali-Dhlamini@2x.jpg" alt="">
-                            <h5>Mbali Dhlamini</h5>
-                            <p>A multidisciplinary artist and visual researcher, Mbali is interested in the decolonisation of contemporary African identity-making.</p>
-                            <a href="shop-single.html" class="body-link">Find out More ></a>
-                        </div>
-                        <div class="col-12 col-md-4 artist">
-                            <img src="img/Themba-Khumalo@2x.jpg" alt="">
-                            <h5>Themba Khumalo</h5>
-                            <p>Themba’s emotive charcoal drawings and paintings capture the busy cityscapes and vast rural landscapes he observes in and around Johannesburg.</p>
-                            <a href="shop-single.html" class="body-link">Find out More ></a>
-                        </div>
-                        <div class="col-12 col-md-4 artist">
-                            <img src="img/Zwelethu-Machepha@2x.jpg" alt="">
-                            <h5>Zwelethu Machepha</h5>
-                            <p>The mixing of original techniques, such as stitching and UV lighting as well as marrying different mediums, make Zwelethu's work is dynamic and distinctive.</p>
-                            <a href="shop-single.html" class="body-link">Find out More ></a>
-                        </div>
-                        <div class="col-12 col-md-4 artist">
-                            <img src="img/Kgomotso-Neto@2x.jpg" alt="">
-                            <h5>Kgomotso Neto</h5>
-                            <p>Kgomotso’s photography blurs the line between documentary and fine art photography, creating raw and honest imagery that draws the viewer in.</p>
-                            <a href="shop-single.html" class="body-link">Find out More ></a>
-                        </div>
-                        <div class="col-12 col-md-4 artist">
-                            <img src="img/Nompumelelo-Ngoma@2x.jpg" alt="">
-                            <h5>Nompumelelo Ngoma</h5>
-                            <p>Nompumelelo’s work gives voice to women’s issues through the alluring medium of oil painting and watercolour.</p>
-                            <a href="shop-single.html" class="body-link">Find out More ></a>
+                        <div class="col-lg-6 col-12 aditional-info">
+                            <h6>ADDITIONAL INFO</h6>
+                            <span class="small-title">FRAMES</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#" class="read-more">Read More ></a>
+                            <span class="small-title">SHIPPING</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#" class="read-more">Read More ></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- //End DISCOVER ARTISTS section -->
+            
+            <!-- Beginning Discover Similar Works section -->
+            <section class="discover-similar-works">
+                <div class="container">
+                    <h3>Discover Similar Works</h3>
+                    <div class="row">
+                        <div class="col-md-4 col-12 work-item">
+                            <figure><img src="img/discover-similar-works.jpg" alt=""></figure>
+                            <h5 class="author">Danielle Kroll</h5>
+                            <span class="catagory">Shelfie</span>
+                            <p>from <span class="from">R850-R1500</span></p>
+                        </div>
+                        <div class="col-md-4 col-12 work-item">
+                            <figure><img src="img/discover-similar-works.jpg" alt=""></figure>
+                            <h5 class="author">Danielle Kroll</h5>
+                            <span class="catagory">Shelfie</span>
+                            <p>from <span class="from">R850-R1500</span></p>
+                        </div>
+                        <div class="col-md-4 col-12 work-item">
+                            <figure><img src="img/discover-similar-works.jpg" alt=""></figure>
+                            <h5 class="author">Danielle Kroll</h5>
+                            <span class="catagory">Shelfie</span>
+                            <p>from <span class="from">R850-R1500</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //End Discover Similar Works section -->
         </div>
         <!-- //End main content section -->
         
@@ -453,7 +519,6 @@
     <script src="./js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="./js/popper.min.js" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="./js/slick.min.js"></script>
     <script src="./js/main-function.js"></script>
 </body>
 

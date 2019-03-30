@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F5F5F5" fill-rule="nonzero" d="M2.6 2.6h34.8v34.8H2.6z"/>
+        <path stroke="#D8D8D8" stroke-width=".6" d="M.3.3h39.4v39.4H.3z"/>
+        <text fill="#414042" font-family="AkzidenzGroteskBQ-Light, Akzidenz-Grotesk BQ" font-size="8" font-weight="300" letter-spacing=".025">
+            <tspan x="14.311" y="18">NO </tspan> <tspan x="6.937" y="27.2">FRAME</tspan>
+        </text>
+    </g>
+</svg>
